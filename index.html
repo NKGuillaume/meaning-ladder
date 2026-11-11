@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meaning Ladder has moved</title>
+  <!-- Search engines: don't list this page; the real one is the canonical URL. -->
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://meaningladder.github.io/">
+  <!-- Fallback if JavaScript is off (it can't keep the #/game/N part). -->
+  <meta http-equiv="refresh" content="1; url=https://meaningladder.github.io/">
+  <script>
+    // Forward to the same screen on the new site: /meaning-ladder/#/game/3
+    // becomes meaningladder.github.io/#/game/3. The origin check means this
+    // can only ever send people to meaningladder.github.io.
+    (function () {
+      var base = "https://meaningladder.github.io";
+      var path = location.pathname.replace(/^\/meaning-ladder/, "") || "/";
+      var target = new URL(path + location.search + location.hash, base);
+      if (target.origin === base) location.replace(target.href);
+    })();
+  </script>
+  <style>
+    body { margin: 0; min-height: 100dvh; display: grid; place-items: center; padding: 16px;
+           text-align: center; background: #f8f3ea; color: #3b332d;
+           font-family: ui-rounded, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    a { color: #a65f42; font-weight: 700; }
+    @media (prefers-color-scheme: dark) { body { background: #1d1a17; color: #efe6da; } a { color: #e39573; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Meaning Ladder has moved</h1>
+    <p>It now lives at <a href="https://meaningladder.github.io/">meaningladder.github.io</a>.</p>
+  </main>
+</body>
+</html>
